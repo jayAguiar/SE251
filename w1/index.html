@@ -4,10 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jay Aguiar Week 1</title>
+    <style>
+        section{
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
+   
+  
+
     <script>
-       document.querySelector("body").innerHTML = "Hi";
+    
+        var body = document.querySelector(`body`)
+
+        var truck =
+        [ 
+            {
+                make:"Dodge",
+                model:"Ram",
+                color:"red",
+                license:"xyz654",
+                powerWindows:true
+            },
+            {
+                make:"Toyota",
+                model:"Tacoma",
+                color:"Orange",
+                license:"bbb000",
+                powerWindows:true
+            }
+        ]
+
+        var content = "";
+
+       for(var i=0; i < truck.length; i++)
+       {
+           content += "<section>"
+           // content += "<ul>"
+               for(index in truck[i])
+               {
+                    content+= "<div>"
+                    content+= "<b>"
+                    content+= index
+                    content+= ": "
+                    content+="</b>"
+                    content+= truck[i][index];
+                    content+= "</div>"
+               }
+
+            //content += "</ul>"
+           content += "</section>"
+       }
+
+        body.innerHTML += content;
+
+
     </script>
 </body>
 </html>
