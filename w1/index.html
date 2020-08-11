@@ -4,62 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jay Aguiar Week 1</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
     <style>
+        
         section{
             margin-bottom: 20px;
+        }
+        .bob
+        {
+            color:red;
+           
+        }
+        .border
+        {
+            border:1px solid black;
+        }
+        html,body{
+            height:200%
+        }
+        div{
+            border:1px solid black;
+        }
+
+        p{
+
         }
     </style>
 </head>
 <body>
+
+    <p>font test</p>
    
-  
+    <div id="results">
 
-    <script>
+    </div>
+    <img src="">
     
-        var body = document.querySelector(`body`)
+    <script>
 
-        var truck =
-        [ 
+        var num = [];
+        console.log(num)
+
+        for(var i=0; i<10; i++)
+        {
+            num[i] = i+1;
+        }
+
+
+        console.log(num)
+
+        for(var i=0; i<num.length; i++)
+        {
+            if(num[i]%2===0)
             {
-                make:"Dodge",
-                model:"Ram",
-                color:"red",
-                license:"xyz654",
-                powerWindows:true
-            },
-            {
-                make:"Toyota",
-                model:"Tacoma",
-                color:"Orange",
-                license:"bbb000",
-                powerWindows:true
+                num[i] = "Fizz"
             }
-        ]
+        }
 
-        var content = "";
+        console.log(num)
 
-       for(var i=0; i < truck.length; i++)
-       {
-           content += "<section>"
-           // content += "<ul>"
-               for(index in truck[i])
-               {
-                    content+= "<div>"
-                    content+= "<b>"
-                    content+= index
-                    content+= ": "
-                    content+="</b>"
-                    content+= truck[i][index];
-                    content+= "</div>"
-               }
+        for(var i=0; i<num.length; i++)
+        {
+            num[i] = {index:i+1, label:""}
 
-            //content += "</ul>"
-           content += "</section>"
-       }
+            if(num[i].index%2===0)
+            {
+                num[i].label = "Fizz"
+            }
+        }
 
-        body.innerHTML += content;
+        console.log(num)
 
+        for(var i=0; i<num.length; i++)
+        {
+          
+        }
 
+       
+        for(value in obj)
+        {
+            console.log(value + ":" + obj[value])
+        }
     </script>
+
 </body>
 </html>
